@@ -64,7 +64,7 @@ class PrivateTagsApiTests(TestCase):
 
     def test_create_tag_successful(self):
         """Test creating a new tag"""
-        payload = {'name':'Test tag'}
+        payload = {'name': 'Test tag'}
 
         self.client.post(TAGS_URL, payload)
 
@@ -75,7 +75,7 @@ class PrivateTagsApiTests(TestCase):
 
     def test_create_tag_invalid(self):
         """Test creating a new tag with invalid payload"""
-        payload = {'name':''}
+        payload = {'name': ''}
 
         res = self.client.post(TAGS_URL, payload)
 
